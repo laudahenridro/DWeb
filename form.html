@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
 </head>
+
 <body>
-    <form>
-        <label for="nome-completo">Nome Completo:</label><br>
-        <input type="text" name="nome-completo" size="30" placeholder="Insira seu nome aqui" required><br>
+    <form method="get">
+        <div id="nome-completo">
+            <label for="nome-completo">Nome Completo:</label><br>
+            <input type="text" name="nome-completo" size="30" placeholder="Insira seu nome aqui" required pattern="[A-Za-z]"><br>
+        </div>
 
         <br>
 
-        <label for="nacao">Nacionalidade:</label><br>
-        <select id="nacao" name="nacao" required>
-            <option value="" selected>Selecione...</option>
-            <option value="brasil">Brasil</option>
-            <option value="argentina">Argentina</option>
-        </select>
+        <div id="nacao">
+            <label for="nacao">Nacionalidade:</label><br>
+            <select id="nacao" name="nacao" required>
+                <option value="" selected>Selecione...</option>
+                <option value="brasil">Brasil</option>
+                <option value="argentina">Argentina</option>
+            </select>
+        </div>
 
         <br> <br>
 
-        <label for="faixa-etaria" >Faixa Etária:</label> <br>
-        <input type="radio" id="menor" name="faixa_etaria" required> <label for="menor"> 0 a 18 anos</label> <br>
-        <input type="radio" id="resto" name="faixa_etaria"> <label for="o-resto"> O resto (kkk)</label> <br>
-
+        <div id="faixa-etaria">
+            <label for="faixa-etaria" >Faixa Etária:</label> <br>
+            <input type="radio" id="menor" name="faixa_etaria" required> <label for="menor"> 0 a 18 anos</label> <br>
+            <input type="radio" id="resto" name="faixa_etaria"> <label for="o-resto"> O resto (kkk)</label> <br>
+        </div>
         <br>
 
-        <label for="n-tenho-ideias">Escreva o porquê de você estar aqui:</label><br>
-        <textarea name="n-tenho-ideias" row="100" cols="100" placeholder="Insira sua motivação aqui" required></textarea><br>
-        
+        <div id="campo-escrita">
+            <label for="campo-escrita">Escreva o porquê de você estar aqui:</label><br>
+            <textarea name="campo-escrita" row="5" cols="100" placeholder="Insira sua motivação aqui" required></textarea><br>
+        </div>
+
         <input type="submit" value="Enviar">
     </form>
 </body>
